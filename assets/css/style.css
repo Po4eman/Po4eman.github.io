@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Roboto+Mono&display=swap');
+:root{
+    --c1:#FFFFFF;/*bg*/
+    --c2: #2c3735;/*dark fonts*/
+    --c3:#2E8B57;/*:active*/
+    --c4: #4fe993;/*links,buttons*/
+    --c5:#e0ffc8;/*light fonts*/
+
+    --f1:'Montserrat', sans-serif;
+    --f2:'Roboto Mono', monospace;
+    --f3:'Quicksand', sans-serif;
+}
+textarea,input{outline: none}
+p,h1,h2,h3,h4,h5,h6,span,img{
+    user-select: none;
+}
+h1,h2,h3,h4,h5,h6{font-family: var(--f3)}
+code,textarea,pre{
+    background-color: #333;
+    color:#ee5;
+    padding: 5px;
+}
+.warn{
+    color:#f55;
+    font-size: 15px;
+}
+.row{display: flex;flex-wrap: wrap;}
+*{
+    margin:0;
+    padding: 0;
+}
+body{background-color: var(--c1);color:var(--c2);font-family: var(--f1)}
+ul{list-style: none;}
+a{text-decoration: none;color:var(--c4);}
+
+header{text-align: center;height: 100vh;}
+.repo-name{
+    font-size: 42px;
+}
+.repo-description{color:var(--c2);position: absolute;top:50%;left:50%;transform: translate(-50%,-50%)}
+.arrow-down{
+    transition: .2s ease-out;
+    height: 50px;
+    width: 50px;
+    left: calc(50% - 25px);
+    bottom:20%;
+    position: absolute;
+    background-color: var(--c3);
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 50px;
+    user-select: none;
+    cursor: pointer;
+}
+.arrow-down:hover{
+    font-size: 20px;
+    color:var(--c4);
+}
+.arrow-down::after{
+    content: "";
+    height: inherit;
+    width: inherit;
+    background-color: var(--c4);
+    left:0;
+    z-index: -1;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+    position: absolute;
+    transition: .2s ease-out;
+}
+.arrow-down:hover::after{
+    transform: rotate(45deg) scale(1.2);
+    border-bottom-right-radius: 0;
+}
+
+header{position: sticky;top:0;border-top: 3px solid var(--c2)}
+#main{
+    background-color: var(--c1);
+}
+#main>article{
+    padding: 10px 50px;
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    top:60px;
+    position: sticky;
+    background: var(--c1);
+    border-top: 3px solid var(--c2);
+}
+
+.list{
+    background-color: var(--c5);
+    margin-bottom: 10px;
+    line-height: 40px;
+    padding: 5px 15px;
+}
+
+
+#tryit,#tryitresult{
+    flex-grow: 1;
+    border:none;
+    border-radius: 10px;
+    resize: vertical;
+}
