@@ -1,3 +1,1 @@
-# pug
-
 # emmet.github.io
