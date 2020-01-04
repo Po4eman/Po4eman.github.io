@@ -5,7 +5,9 @@
     --c4: #4fe993;/*links,buttons*/
     --c5:#e0ffc8;/*light fonts*/
 }
-
+p,h1,h2,h3,h4,h5,h6,span,img{
+    user-select: none;
+}
 
 
 *{
